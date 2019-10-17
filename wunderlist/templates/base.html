@@ -14,6 +14,9 @@
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">{{user.username}}</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="{% url 'accounts:logout' %}" tabindex="-1" aria-disabled="true">로그아웃</a>
+      </li>
     {%  else %}
       <li class="nav-item">
         <a class="nav-link active" href="{% url 'accounts:signup' %}">회원가입</a>
@@ -22,9 +25,6 @@
         <a class="nav-link" href="{% url 'accounts:login' %}">로그인</a>
       </li>
     {% endif %}
-      <li class="nav-item">
-        <a class="nav-link" href="#">로그아웃</a>
-      </li>
     
   </ul>
   <div class="container">
